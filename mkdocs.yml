@@ -1,3 +1,18 @@
 site_name: Common Outcomes Wiki
+nav:
+  - Introduction: 
+    - Co-modelling change: intro.md
+  - Modelling concepts:
+    - Semantics of change: semantics.md
+    - Graph of change: graph.md
+    - Scope of change: scope.md
+    - Evolutivity of change: status.md
+    - Support for change: support.md
+    - Topology of change: topology.md
+  - In Practice:
+    - Searching: searching.md
+    - Creating: creating.md
+    - Examples: examples.md
+    - Collaboration: collaboration.md
 
 theme: readthedocs
