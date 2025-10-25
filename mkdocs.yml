@@ -8,6 +8,7 @@ nav:
     - Scope of change: scope.md
     - Evolutivity of change: status.md
     - Support for change: support.md
+    - Natural languages for change: languages.md
     - Topology of change: topology.md
   - In Practice:
     - Searching: searching.md
