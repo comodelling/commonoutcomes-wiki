@@ -3,10 +3,10 @@ nav:
   - Introduction: 
     - Co-modelling change: intro.md
   - Modelling concepts:
-    - Semantics of change: semantics.md
     - Graph of change: graph.md
+    - Semantics of change: semantics.md
     - Scope of change: scope.md
-    - Evolutivity of change: status.md
+    - Evolutivity of change: evolutivity.md
     - Support for change: support.md
     - Natural languages for change: languages.md
     - Topology of change: topology.md
