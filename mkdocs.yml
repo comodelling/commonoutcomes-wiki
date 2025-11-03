@@ -1,19 +1,28 @@
-site_name: Common Outcomes Wiki
+site_name: CommonOutcomes Wiki
 nav:
-  - Introduction: 
-    - Co-modelling change: intro.md
-  - Modelling concepts:
-    - Graph of change: graph.md
+  - Home: index.md
+  - Co-modelling change: change.md
+  - Modelling Axes:
     - Semantics of change: semantics.md
-    - Scope of change: scope.md
-    - Evolutivity of change: evolutivity.md
+    - Graph of change: graph.md
+    - Evolving change: evolving.md
     - Support for change: support.md
-    - Natural languages for change: languages.md
-    - Topology of change: topology.md
+    - Translating change: translating.md
   - In Practice:
-    - Searching: searching.md
-    - Creating: creating.md
-    - Examples: examples.md
-    - Collaboration: collaboration.md
+    - Exploring: exploring.md
+    - Creating & editing: editing.md
+    - Collaborating: collaborating.md
+  - Links:
+    - CommonOutcomes: https://commonoutcomes.org
+    - CommonGraph: https://github.com/comodelling/commongraph/
+    - Comodelling: https://comodelling.org
 
 theme: readthedocs
+markdown_extensions:
+  - footnotes
+  - admonition
+  - pymdownx.superfences
+plugins:
+  - search
+  - mermaid2
+copyright: Copyright © Mario Morvan 2025 — licensed under CC BY-SA 4.0
