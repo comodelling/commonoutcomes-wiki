@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+
+<html class="writer-html5" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="../img/favicon.ico" rel="shortcut icon"/>
+<title>Graph of change - CommonOutcomes Wiki</title>
+<link href="../css/theme.css" rel="stylesheet"/>
+<link href="../css/theme_extra.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" rel="stylesheet"/>
+<link href="../css/version-select.css" rel="stylesheet"/>
+<script>
+        // Current page data
+        var mkdocs_page_name = "Graph of change";
+        var mkdocs_page_input_path = "graph.md";
+        var mkdocs_page_url = null;
+      </script>
+<!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+</head>
+<body class="wy-body-for-nav" role="document">
+<div class="wy-grid-for-nav">
+<nav class="wy-nav-side stickynav" data-toggle="wy-nav-shift">
+<div class="wy-side-scroll">
+<div class="wy-side-nav-search">
+<a class="icon icon-home" href=".."> CommonOutcomes Wiki
+        </a><div role="search">
+<form action="../search.html" class="wy-form" id="rtd-search-form" method="get">
+<input aria-label="Search docs" name="q" placeholder="Search docs" title="Type search term here" type="text"/>
+</form>
+</div>
+</div>
+<div aria-label="Navigation menu" class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../change/">Co-modelling change</a>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Modelling Axes</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../semantics/">Semantics of change</a>
+</li>
+<li class="toctree-l1 current"><a class="reference internal current" href="#">Graph of change</a>
+<ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="#causal-relations">Causal relations</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#properties">Properties</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#schema">Schema</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../evolving/">Evolving change</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../support/">Support for change</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../translating/">Translating change</a>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">In Practice</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../exploring/">Exploring</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../editing/">Creating &amp; editing</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../collaborating/">Collaborating</a>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Links</span></p>
+<ul>
+<li class="toctree-l1"><a class="" href="https://commonoutcomes.org">CommonOutcomes</a>
+</li>
+<li class="toctree-l1"><a class="" href="https://github.com/comodelling/commongraph/">CommonGraph</a>
+</li>
+<li class="toctree-l1"><a class="" href="https://comodelling.org">Comodelling</a>
+</li>
+</ul>
+</div>
+</div>
+</nav>
+<section class="wy-nav-content-wrap" data-toggle="wy-nav-shift">
+<nav aria-label="Mobile navigation menu" class="wy-nav-top" role="navigation">
+<i class="fa fa-bars" data-toggle="wy-nav-top"></i>
+<a href="..">CommonOutcomes Wiki</a>
+</nav>
+<div class="wy-nav-content">
+<div class="rst-content"><div aria-label="breadcrumbs navigation" role="navigation">
+<ul class="wy-breadcrumbs">
+<li><a aria-label="Docs" class="icon icon-home" href=".."></a></li>
+<li class="breadcrumb-item">Modelling Axes</li>
+<li class="breadcrumb-item active">Graph of change</li>
+<li class="wy-breadcrumbs-aside">
+</li>
+</ul>
+<hr/>
+</div>
+<div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
+<div class="section" itemprop="articleBody">
+<h1 id="graph-of-change">Graph of change</h1>
+<p>Here, we define the graph model underlying CommonOutcomes.</p>
+<h2 id="causal-relations">Causal relations</h2>
+<p>Change cannot happen in isolation, it presupposes causes and/or effects.<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>
+Therefore, our model needs not only to represent units of change, but also their causal interconnections.</p>
+<p>This leads us to consider, in its simplest form, a directed graph where nodes are the units of change, and edges represent relations of causality. Parents of a given node can be seen as conditions or causes, and child nodes as implications, effects, consequences, or follow-ups... Causality does not need to be strict: a condition—or set of conditions—may be neither sufficient nor necessary. The only assumption is that some form of causality exists between a parent node—or set of parent nodes—and its children.<sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup></p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<div class="mermaid">graph LR
+  ConditionA --&gt; Change --&gt; Consequence1
+  Condition2 --&gt; Change --&gt; Consequence2</div>
+</div>
+<h2 id="properties">Properties</h2>
+<p>We use a property graph as underlying data model to attach various properties to our nodes and edges: currently an <em>id</em>, a <a href="../semantics/#scope"><em>scope</em></a>, a <a href="evolutivity.md#status"><em>status</em></a>, a <em>description</em>, <em>references</em> and <em>tags</em>.</p>
+<h2 id="schema">Schema</h2>
+<p>Though graph databases, contrary to relational databases, do not require a fixed schema, we propose here to enforce a graph schema.
+Each node is identified uniquely by an <em>id</em>, and must have a <em>title</em>, a <em>type</em>, and a <em>scope</em> properties. Furthermore, node <em>types</em> can only take certain values according to our agreed <a href="../semantics/">semantics</a>, forcing an important discussion about terms.
+Each edge is identified by a pair of <em>ids</em>, one of the parent and one for the child, and a single type <em>imply</em> (or <em>implication</em>), representing the relation of soft causality discussed above.</p>
+<p>Given the <a href="collaboration.md">participatory</a> and <a href="evolutivity.md">evolutive</a> nature of the project, we do not assume that the absence of an edge means that no such relation exists in the real world. This is called the Open World Assumption (OWA).</p>
+<div class="footnote">
+<hr/>
+<ol>
+<li id="fn:1">
+<p>Of course, sometimes there are no identifiable causes, and effects may be unclear. If no potential cause or effect can be identified, we will refer to it as "isolated" change, and will consider it irrelevant for the current project. <a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">↩</a></p>
+</li>
+<li id="fn:2">
+<p>If we associate a random variable to each node, a conditional probability to each edge, and assume no loop in the graph, this model fits what is called a graphical causal model, causal graph or causal bayesian network. <a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">↩</a></p>
+</li>
+</ol>
+</div>
+</div>
+</div><footer>
+<div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
+<a class="btn btn-neutral float-left" href="../semantics/" title="Semantics of change"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+<a class="btn btn-neutral float-right" href="../evolving/" title="Evolving change">Next <span class="icon icon-circle-arrow-right"></span></a>
+</div>
+<hr/>
+<div role="contentinfo">
+<!-- Copyright etc -->
+<p>Copyright © Mario Morvan 2025 — licensed under CC BY-SA 4.0</p>
+</div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+</div>
+</div>
+</section>
+</div>
+<div aria-label="Versions" class="rst-versions" role="note">
+<span class="rst-current-version" data-toggle="rst-current-version">
+<span><a href="../semantics/" style="color: #fcfcfc">« Previous</a></span>
+<span><a href="../evolving/" style="color: #fcfcfc">Next »</a></span>
+</span>
+</div>
+<script src="../js/jquery-3.6.0.min.js"></script>
+<script>var base_url = "..";</script>
+<script src="../js/theme_extra.js"></script>
+<script src="../js/theme.js"></script>
+<script src="../search/main.js"></script>
+<script src="../js/version-select.js"></script>
+<script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+<script type="module">import mermaid from "https://unpkg.com/mermaid@10.4.0/dist/mermaid.esm.min.mjs";
+mermaid.initialize({});</script></body>
+</html>
