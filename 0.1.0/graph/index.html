@@ -117,12 +117,12 @@ Therefore, our model needs not only to represent units of change, but also their
   Condition2 --&gt; Change --&gt; Consequence2</div>
 </div>
 <h2 id="properties">Properties</h2>
-<p>We use a property graph as underlying data model to attach various properties to our nodes and edges: currently an <em>id</em>, a <a href="../semantics/#scope"><em>scope</em></a>, a <a href="evolutivity.md#status"><em>status</em></a>, a <em>description</em>, <em>references</em> and <em>tags</em>.</p>
+<p>We use a property graph as underlying data model to attach various properties to our nodes and edges: currently an <em>id</em>, a <a href="../semantics/#properties"><em>scope</em></a>, a <a href="../evolving/#status"><em>status</em></a>, a <em>description</em>, <em>references</em> and <em>tags</em>.</p>
 <h2 id="schema">Schema</h2>
 <p>Though graph databases, contrary to relational databases, do not require a fixed schema, we propose here to enforce a graph schema.
 Each node is identified uniquely by an <em>id</em>, and must have a <em>title</em>, a <em>type</em>, and a <em>scope</em> properties. Furthermore, node <em>types</em> can only take certain values according to our agreed <a href="../semantics/">semantics</a>, forcing an important discussion about terms.
 Each edge is identified by a pair of <em>ids</em>, one of the parent and one for the child, and a single type <em>imply</em> (or <em>implication</em>), representing the relation of soft causality discussed above.</p>
-<p>Given the <a href="collaboration.md">participatory</a> and <a href="evolutivity.md">evolutive</a> nature of the project, we do not assume that the absence of an edge means that no such relation exists in the real world. This is called the Open World Assumption (OWA).</p>
+<p>Given the <a href="../collaborating/">participatory</a> and <a href="../evolving/">evolutive</a> nature of the project, we do not assume that the absence of an edge means that no such relation exists in the real world. This is called the Open World Assumption (OWA).</p>
 <div class="footnote">
 <hr/>
 <ol>
